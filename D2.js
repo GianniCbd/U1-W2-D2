@@ -1,9 +1,16 @@
 /* ESERCIZIO 1
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
-let primo = 1;
-let secondo = 5;
-console.log(primo <= secondo);
+let primo = 10;
+let secondo = 10;
+if (primo < secondo) {
+  console.log("primo è minore di secondo");
+} else if (secondo < primo) {
+  console.log("secondo è minore di primo");
+} else {
+  console.log("primo è uguale a secondo");
+}
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 2
@@ -13,7 +20,7 @@ console.log(primo <= secondo);
 /* SCRIVI QUI LA TUA RISPOSTA */
 const numerouno = 10;
 const numerodue = 5;
-if (numerouno != numerodue) {
+if (numerouno !== numerodue) {
   console.log("not equal");
 }
 
@@ -43,7 +50,7 @@ const shoppingCost = totalShoppingCart >= 80 ? 0 : 5;
 console.log(
   "La spesa totale è di:",
   totalShoppingCart + ", il costo di spedizione è:",
-  shoppingCost > 0 ? shoppingCost : "è gratis"
+  shoppingCost > 0 ? shoppingCost : "gratis!!"
 );
 
 /* ESERCIZIO 6
@@ -52,6 +59,16 @@ console.log(
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const totalShoppingCart2 = 60;
+const shoppincgCost2 = 80 ? 0 : 5;
+
+const prezzofinale = totalShoppingCart2 * 0.8;
+
+if (prezzofinale >= 80) {
+  console.log("totale da pagare:" + prezzofinale);
+} else {
+  console.log("totale da pagare" + prezzofinale + shoppingCost + "di cui spedizione 10");
+}
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -60,6 +77,34 @@ console.log(
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+/* ESERCIZIO 8
+    Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
+  */
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+let valore = 6;
+
+if (typeof valore === "number") {
+  console.log("è un numero");
+} else {
+  console.log("non è un numero");
+}
+/* ESERCIZIO 9
+    Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
+  */
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+/* ESERCIZIO 8
+    Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
+  */
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+/* ESERCIZIO 9
+    Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
+  */
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
@@ -74,6 +119,14 @@ console.log(
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let val = 8;
+if (val < 10 && val > 5) {
+  console.log("meno di 10");
+} else if (val < 5) {
+  console.log("meno di 5");
+} else {
+  console.log("uguale a 10 o maggiore");
+}
 
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
@@ -107,17 +160,16 @@ console.log(me);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const newArray = [];
-newArray[0] = 1;
-newArray[1] = 10;
-console.log(newArray);
+let arr = [];
+arr.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+console.log(arr);
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-console.log(newArray);
-newArray.pop();
-console.log(newArray);
-newArray.push(100);
-console.log(newArray);
+let newArr = arr.slice();
+
+newArr.splice(9, 1, 100);
+console.log(newArr);
+console.log(arr);
